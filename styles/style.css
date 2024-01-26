@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-weight: 300;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  background-color: rgba(240, 255, 255, 0.832);
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.button-container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.25rem 1rem;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  border-color: #2859bc;
+  background-color: rgba(240, 255, 255, 0.832);
+  font-size: 1.1rem;
+  color: #2859bc;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #2859bc;
+  color: rgba(240, 255, 255, 0.832);
+  transition: 0.4s;
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    flex-grow: 1;
+  }
+}
+
+.menu-list {
+  width: 100%;
+  padding: 0 4rem;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .menu-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 425px) {
+  .menu-list {
+    padding: 0 1rem;
+  }
+}
+.menu-list .food-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc(250px - 1rem) calc(100% - 250px - 1rem);
+  grid-gap: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .menu-list .food-item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menu-list .food-item > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 155px;
+  border: 4px solid #2859bc;
+  border-radius: 0.5rem;
+  -o-object-position: center top;
+     object-position: center top;
+}
+
+.food-detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #617d98;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+}
+.food-detail .price {
+  font-weight: bold;
+  color: #2859bc;
+}
+
+.food-more {
+  color: #617d98;
+  line-height: 1.5rem;
+}
+
+.active-btn {
+  background-color: #2859bc;
+  color: rgba(240, 255, 255, 0.832);
+}
